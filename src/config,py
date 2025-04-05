@@ -1,0 +1,9 @@
+import os
+
+# Paths and model parameters
+DATA_PATH: str = os.getenv("DATA_PATH", "data/sample_transactions.csv")
+MODEL_PATH: str = os.getenv("MODEL_PATH", "models/sanctions_model.pkl")
+
+# Model training configuration
+RANDOM_STATE: int = 42
+TEST_SIZE: float = 0.2

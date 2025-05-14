@@ -57,3 +57,22 @@ This system is designed to be **modular**, **secure**, and **scalable**, capable
 
 ---
 
+### 🛠️ Quick Start
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-org/aml-sanctions-detection.git
+cd aml-sanctions-detection
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Run tests
+pytest tests/
+
+# 4. Launch API (FastAPI)
+uvicorn api.predict:app --reload
+```
+
+---
+

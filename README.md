@@ -75,4 +75,39 @@ uvicorn api.predict:app --reload
 ```
 
 ---
+### 🧪 Example Inference
 
+```bash
+POST /predict
+{
+  "sender_name": "Ali Hosseini",
+  "receiver_name": "Alexander Ivanov",
+  "country": "Russia",
+  "amount": 15000
+}
+→ Response: { "risk_score": 0.87, "sanction_match": true }
+```
+
+---
+
+### 📌 Security
+
+* ✅ **API Token Authentication** with optional JWT rotation
+* 🔐 **AES-256 GCM Encryption** of sensitive fields
+* 🛡️ **IP Anomaly Monitoring** to detect brute-force access
+* 🔍 **Redaction Engine** to mask names in logs
+
+---
+
+### 📈 Model Training
+
+```bash
+python training/train_model.py
+```
+
+Supports:
+
+* `XGBoost`
+* `LightGBM`
+* `RandomForest`
+* Deep Learning architectures (LSTM, DNN)
